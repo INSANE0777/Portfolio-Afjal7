@@ -12,7 +12,7 @@ html {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Lexend Exa', sans-serif;
 }
 
 body {
@@ -456,9 +456,12 @@ span {
    
 }
 
-h2,h3{
+h1,h2,h3,h4{
 
     font-family: 'Press Start 2P', monospace;
+}
+h4{
+    margin: 40px;
 }
 @keyframes fillProgress {
     from { width: 0; }
@@ -521,5 +524,5 @@ main, header {
 
   
   .radial-background:hover {
-    background: radial-gradient(circle, #26364f 0%, #1e5868 100%);
+    background: radial-gradient( circle,#151b35 0%, #2c1295 100%);
   }

@@ -13,13 +13,13 @@ document.addEventListener('DOMContentLoaded', () => {
       star.style.left = `${Math.random() * 100}%`;
       star.style.top = `${Math.random() * 100}%`;
       
-      const duration = Math.random() * 20 + 10; // 10-30 seconds
-      star.style.animationDuration = `4s, ${duration}s`; // twinkle and move durations
+      const duration = Math.random() * 20 + 10;
+      star.style.animationDuration = `4s, ${duration}s`; 
 
       const delay = Math.random() * -duration;
-      star.style.animationDelay = `0s, ${delay}s`; // twinkle and move delays
+      star.style.animationDelay = `0s, ${delay}s`; 
 
-      // Randomize direction
+      
       const angle = Math.random() * 360;
       star.style.transform = `rotate(${angle}deg)`;
 
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   createStarField();
 
-  // Function to remove stars that have moved off-screen and create new ones
+
   function updateStars() {
       const stars = document.querySelectorAll('.star');
       stars.forEach(star => {
@@ -46,10 +46,10 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   }
 
-  // Update stars periodically
-  setInterval(updateStars, 1000); // Check every second
+ 
+  setInterval(updateStars, 1000);
 
-  // Existing scroll-to-top functionality
+
   document.getElementById('scroll-to-top').addEventListener('click', function(e) {
       e.preventDefault();
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -65,22 +65,21 @@ document.addEventListener('DOMContentLoaded', () => {
       const width = window.innerWidth;
       const height = window.innerHeight;
 
-      // Calculate the position of the gradient center
+      
       const centerX = (x / width) * 100;
       const centerY = (y / height) * 100;
 
-      // Create a radial gradient that follows the mouse
-      const gradient = `radial-gradient(circle at ${centerX}% ${centerY}%, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.7) 50%, rgba(23, 37, 84, 0.7) 100%)`;
+      const gradient = `radial-gradient(circle at ${centerX}% ${centerY}%, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.7) 100%, rgba(23, 37, 84, 0.7) 100%)`;
       
-      // Apply the gradient to the background
+     
       radialBackground.style.background = gradient;
 
-      // Calculate shake amount based on mouse position
-      const shakeX = (x - width / 2) / width * 5; // Max 5px shift
-      const shakeY = (y - height / 2) / height * 5; // Max 5px shift
+   
+      const shakeX = (x - width / 2) / width * 5; 
+      const shakeY = (y - height / 2) / height * 5; 
 
-      // Apply shake to main content and header
+      
       mainContent.style.transform = `translate(${shakeX}px, ${shakeY}px)`;
-      header.style.transform = `translate(${shakeX * 0.5}px, ${shakeY * 0.5}px)`; // Reduced effect on header
+      header.style.transform = `translate(${shakeX * 0.5}px, ${shakeY * 0.5}px)`; 
   });
 });
