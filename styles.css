@@ -460,9 +460,22 @@ h1,h2,h3,h4{
 
     font-family: 'Press Start 2P', monospace;
 }
-h4{
+h4 {
     margin: 40px;
 }
+
+@media (max-width: 768px) {
+    h4 {
+        margin: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    h4 {
+        margin: 10px;
+    }
+}
+
 @keyframes fillProgress {
     from { width: 0; }
     to { width: 100%; }
