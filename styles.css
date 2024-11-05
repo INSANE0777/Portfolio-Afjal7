@@ -539,3 +539,41 @@ main, header {
   .radial-background:hover {
     background: radial-gradient( circle,#151b35 0%, #2c1295 100%);
   }
+  .Logo2 {
+    width: 200px;
+    height: auto;
+    transform: scale(0.8);
+  }
+  
+  @media (max-width: 768px) {
+    #logo-image {
+      width: 150px;
+      transform: scale(0.6);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #logo-image {
+      width: 100px;
+      transform: scale(0.4);
+    }
+  }
+  .Logo1 {
+    width: 200px;
+    height: auto;
+    transform: scale(0.8);
+  }
+  
+  @media (max-width: 768px) {
+    #logo-image {
+      width: 150px;
+      transform: scale(0.6);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #logo-image {
+      width: 100px;
+      transform: scale(0.4);
+    }
+  }
